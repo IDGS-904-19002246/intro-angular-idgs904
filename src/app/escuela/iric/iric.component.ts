@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { alumnosIr } from '../alumnosIr';
 
 @Component({
   selector: 'app-iric',
@@ -6,14 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./iric.component.css']
 })
 export class IricComponent {
-  alumnos:any[]=[
+
+  imageWidth:number=50;
+  imageMargin:number=2;
+  muestraImg:boolean=true;
+  listFilter:string='';
+
+  alumnosIric:alumnosIr[]=[
     {
     "matricula": 1234,
     "nombre":"Mario",
     "edad":23,
     "correo":"mario@gmail.com",
     "pago":16900,
-    "foto":"https://static.wikia.nocookie.net/memes-pedia/images/e/ef/Shad.png/revision/latest?cb=20200809145913&path-prefix=es"
+    "foto":"https://w0.peakpx.com/wallpaper/719/656/HD-wallpaper-shadbase-shadman-sr-pelo.jpg"
     },
     {
       "matricula": 1235,
@@ -29,8 +36,12 @@ export class IricComponent {
       "edad":23,
       "correo":"JJ@gmail.com",
       "pago":10,
-      "foto":"https://static.wikia.nocookie.net/memes-pedia/images/e/ef/Shad.png/revision/latest?cb=20200809145913&path-prefix=es"
+      "foto":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTyZR7Q1xiW5KJwD2EgaDqfruo1o3X821TJepkgG2-Hx8FNWzbLoRUmL2cbtnl1MUIDQ0&usqp=CAU"
       }
   ]
+
+  showImagen():void{
+    this.muestraImg = !this.muestraImg;
+  }
 
 }

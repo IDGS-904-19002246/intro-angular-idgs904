@@ -4,28 +4,55 @@
     </div>
     <div class="card-body">
         <div class="row">
-            <div class="col-md-2"></div>
+            <div class="col-md-2">Filtrar Por</div>
             <div class="col-md-4">
-                
+                <input [(ngModel)]="listFilter" type="text" class="form-control" name="filter">
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <h3>Filtro:</h3>
+                <h3>Filtro:{{listFilter}}</h3>
             </div>
         </div>
         <div class="table-responsive">
-            <table class="table" *ngIf="alumnos.length">
+            <table class="table" *ngIf="alumnosIric.length">
                 <thead>
                     <tr>
-                        <th></th>
+                        
+                        <th><button
+                            (click)="showImagen()"
+                            class="btn btn-primary">
+                            {{muestraImg?'Ocultar ':'Muestra '}}
+                            Imagen</button></th>
                         <th>matricula</th>
                         <th>nombre</th>
                         <th>edad</th>
                         <th>correo</th>
                         <th>pago</th>
+                        <th>Foto</th>
                     </tr>
                 </thead>
+
+                <tbody>
+                    <tr *ngFor="let a of alumnosIric"
+                    
+                    >
+                        
+                        <td></td>
+                        <td>{{a.matricula}}</td>
+                        <td>{{a.nombre}}</td>
+                        <td>{{a.edad}}</td>
+                        <td>{{a.correo}}</td>
+                        <td>{{a.pago}}</td>
+                        <td><img [src]="a.foto" alt="ALT"
+                            *ngIf="muestraImg"
+                            [title]="a.nombre"
+                            [style.width.px]="imageWidth"
+                            [style.margin.px]="imageMargin"
+                            ></td>
+                    </tr>
+                </tbody>
+
             </table>
         </div>
     </div>
