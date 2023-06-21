@@ -7,6 +7,10 @@ import { ievnComponent } from './ievn/ievn.component';
 import { IricComponent } from './escuela/iric/iric.component';
 import { MenuComponent } from './escuela/menu/menu.component';
 import { FormsModule } from '@angular/forms';
+import { SumarComponent } from './escuela/formularios/sumar/sumar.component';
+import { OperasModule } from './escuela/formularios/operas/operas.module';
+
+
 
 @NgModule({
   declarations: [
@@ -14,11 +18,13 @@ import { FormsModule } from '@angular/forms';
     escuelaComponent,
     ievnComponent,
     IricComponent,
-    MenuComponent
+    MenuComponent,
+    SumarComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    OperasModule
+    // MatInputModule,MatIconModule,MatButtonModule,MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
