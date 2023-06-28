@@ -30,26 +30,31 @@
                         <th>correo</th>
                         <th>pago</th>
                         <th>Foto</th>
+                        <th>Calificación</th>
                     </tr>
                 </thead>
 
                 <tbody>
-                    <tr *ngFor="let a of alumnosIric"
+                    <tr *ngFor="let a of alumnosIric | alumnosFilter:listFilter"
                     
                     >
                         
                         <td></td>
                         <td>{{a.matricula}}</td>
-                        <td>{{a.nombre}}</td>
+                        <td>{{a.nombre | uppercase}}</td>
                         <td>{{a.edad}}</td>
                         <td>{{a.correo}}</td>
-                        <td>{{a.pago}}</td>
-                        <td><img [src]="a.foto" alt="ALT"
+                        <td>{{a.pago | currency}}</td>
+                        <!-- <td>{{a.calif}}</td> -->
+                        <td> <app-calificaciones-alum [califica]="a.calif"></app-calificaciones-alum> </td>
+                        
+
+                        <!-- <td><img [src]="a.foto" alt="ALT"
                             *ngIf="muestraImg"
                             [title]="a.nombre"
                             [style.width.px]="imageWidth"
                             [style.margin.px]="imageMargin"
-                            ></td>
+                            ></td> -->
                     </tr>
                 </tbody>
 

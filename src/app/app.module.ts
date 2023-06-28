@@ -9,6 +9,8 @@ import { MenuComponent } from './escuela/menu/menu.component';
 import { FormsModule } from '@angular/forms';
 import { SumarComponent } from './escuela/formularios/sumar/sumar.component';
 import { OperasModule } from './escuela/formularios/operas/operas.module';
+import { AlumnosFilterPipe } from './escuela/alumnos-filter.pipe';
+import { CalificacionesAlumComponent } from './escuela/calificaciones-alum/calificaciones-alum.component';
 
 
 
@@ -19,11 +21,14 @@ import { OperasModule } from './escuela/formularios/operas/operas.module';
     ievnComponent,
     IricComponent,
     MenuComponent,
-    SumarComponent
+    SumarComponent,
+    AlumnosFilterPipe,
+    CalificacionesAlumComponent
   ],
   imports: [
     BrowserModule,
-    OperasModule
+    OperasModule,
+    FormsModule
     // MatInputModule,MatIconModule,MatButtonModule,MatRadioModule
   ],
   providers: [],
