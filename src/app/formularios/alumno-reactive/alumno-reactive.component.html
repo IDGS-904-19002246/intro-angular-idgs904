@@ -1,0 +1,122 @@
+<h1>Formularios</h1>
+
+<div class="row">
+    <div class="col-6">
+        <form (ngSubmit)="onSubmit()" [formGroup]="alumnoForm">
+            <div class="mb-4">
+                <label for="matricula" class="form-label">Matricula</label>
+                <input type="text" id="matricula" required formControlName="matricula"
+                name="matricula" class="form-control">
+
+                <div *ngIf="alumnoForm.get('matricula')?.touched &&
+                alumnoForm.get('matricula')?.errors?.['required']" class="alert alert-danger">
+                Este campo es requerido
+                </div>
+                <!-- ------------------------------------------------------------------------------ -->
+                <div *ngIf="alumnoForm.get('matricula')?.touched &&
+                alumnoForm.get('matricula')?.errors?.['minlength']" class="alert alert-danger">
+                La matricula debe ser mas largo que
+                {{alumnoForm.get('matricula')?.errors?.['minlength']?.requiredLength}}
+                </div>
+                <!-- ------------------------------------------------------------------------------ -->
+            </div>
+
+            <div class="mb-4">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" id="nombre" required formControlName="nombre"
+                name="nombre" class="form-control">
+
+                <div *ngIf="alumnoForm.get('matricula')?.touched &&
+                alumnoForm.get('matricula')?.errors?.['required']" class="alert alert-danger">
+                Este campo es requerido
+                </div>
+                <!-- ------------------------------------------------------------------------------ -->
+                <div *ngIf="alumnoForm.get('nombre')?.touched &&
+                alumnoForm.get('nombre')?.errors?.['minlength']" class="alert alert-danger">
+                La nombre debe ser mas largo que
+                {{alumnoForm.get('nombre')?.errors?.['minlength']?.requiredLength}} caracteres.
+                </div>
+                <!-- ------------------------------------------------------------------------------ -->
+            </div>
+
+            
+            <div class="mb-4">
+                <label for="edad" class="form-label">Edad</label>
+                <input type="text" id="edad" required formControlName="edad"
+                name="edad" class="form-control">
+
+                <div *ngIf="alumnoForm.get('matricula')?.touched &&
+                alumnoForm.get('matricula')?.errors?.['required']" class="alert alert-danger">
+                Este campo es requerido
+                </div>
+                <!-- ------------------------------------------------------------------------------ -->
+                <div *ngIf="alumnoForm.get('nombre')?.touched &&
+                alumnoForm.get('nombre')?.errors?.['minlength']" class="alert alert-danger">
+                La nombre debe ser mas largo que
+                {{alumnoForm.get('nombre')?.errors?.['minlength']?.requiredLength}} caracteres.
+                </div>
+                <!-- ------------------------------------------------------------------------------ -->
+            </div>
+
+            <div class="mb-4">
+                <label for="correo" class="form-label">Correo</label>
+                <input type="text" id="correo" required formControlName="correo"
+                name="correo" class="form-control">
+
+                <div *ngIf="alumnoForm.get('matricula')?.touched &&
+                alumnoForm.get('matricula')?.errors?.['required']" class="alert alert-danger">
+                Este campo es requerido
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label for="foto" class="form-label">foto</label>
+                <input type="text" id="foto" required formControlName="foto"
+                name="foto" class="form-control">
+            </div>
+
+            <div class="mb-4">
+                <label for="calif" class="form-label">Calificación</label>
+                <input type="text" id="calif" required formControlName="calif"
+                name="calif" class="form-control">
+
+                <div *ngIf="alumnoForm.get('matricula')?.touched &&
+                alumnoForm.get('matricula')?.errors?.['required']" class="alert alert-danger">
+                Este campo es requerido
+                </div>
+            </div>
+
+            <div class="d-grid gap-2 col-4 float-end">
+                <button class="btn btn-info bg-lg" type="submit">Guarda :3</button>
+            </div>
+
+        </form>
+    </div>
+    <div class="col-6">
+        <h1>Registros</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Matricula</th>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Correo</th>
+                    <th>Calificación</th>
+                    <th>Foto</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</div>
+

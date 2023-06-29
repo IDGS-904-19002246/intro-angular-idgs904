@@ -14,6 +14,8 @@ export class IricComponent {
   muestraImg:boolean=true;
   listFilter:string='';
 
+  alumnoTitle!:string;
+
   alumnosIric:alumnosIr[]=[
     {
     "matricula": 1234,
@@ -22,7 +24,7 @@ export class IricComponent {
     "correo":"mario@gmail.com",
     "pago":16900,
     "foto":"https://w0.peakpx.com/wallpaper/719/656/HD-wallpaper-shadbase-shadman-sr-pelo.jpg",
-    "calif":5
+    "calif":4.8
     },
     {
       "matricula": 1235,
@@ -46,6 +48,10 @@ export class IricComponent {
 
   showImagen():void{
     this.muestraImg = !this.muestraImg;
+  }
+
+  onCalificaClick(message:string){
+    this.alumnoTitle = `${message}`;
   }
 
 }

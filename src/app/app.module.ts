@@ -6,11 +6,13 @@ import { escuelaComponent } from './escuela/escuela.component';
 import { ievnComponent } from './ievn/ievn.component';
 import { IricComponent } from './escuela/iric/iric.component';
 import { MenuComponent } from './escuela/menu/menu.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { SumarComponent } from './escuela/formularios/sumar/sumar.component';
 import { OperasModule } from './escuela/formularios/operas/operas.module';
 import { AlumnosFilterPipe } from './escuela/alumnos-filter.pipe';
 import { CalificacionesAlumComponent } from './escuela/calificaciones-alum/calificaciones-alum.component';
+import { AlumnoReactiveComponent } from './formularios/alumno-reactive/alumno-reactive.component';
 
 
 
@@ -23,12 +25,15 @@ import { CalificacionesAlumComponent } from './escuela/calificaciones-alum/calif
     MenuComponent,
     SumarComponent,
     AlumnosFilterPipe,
-    CalificacionesAlumComponent
+    CalificacionesAlumComponent,
+    AlumnoReactiveComponent
   ],
   imports: [
     BrowserModule,
     OperasModule,
-    FormsModule
+    FormsModule,
+
+    ReactiveFormsModule
     // MatInputModule,MatIconModule,MatButtonModule,MatRadioModule
   ],
   providers: [],

@@ -30,7 +30,7 @@
                         <th>correo</th>
                         <th>pago</th>
                         <th>Foto</th>
-                        <th>Calificación</th>
+                        <th>Calificación - {{alumnoTitle}}</th>
                     </tr>
                 </thead>
 
@@ -46,7 +46,10 @@
                         <td>{{a.correo}}</td>
                         <td>{{a.pago | currency}}</td>
                         <!-- <td>{{a.calif}}</td> -->
-                        <td> <app-calificaciones-alum [califica]="a.calif"></app-calificaciones-alum> </td>
+                        <td> <app-calificaciones-alum
+                            (calificaClick)="onCalificaClick($event)"
+                            [califica]="a.calif">
+                        </app-calificaciones-alum> </td>
                         
 
                         <!-- <td><img [src]="a.foto" alt="ALT"
