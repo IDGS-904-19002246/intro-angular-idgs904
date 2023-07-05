@@ -9,7 +9,7 @@ import { MenuComponent } from './escuela/menu/menu.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { SumarComponent } from './escuela/formularios/sumar/sumar.component';
-import { OperasModule } from './escuela/formularios/operas/operas.module';
+import { OperasModule } from './escuela/formularios/operas-bas/operas.module';
 import { AlumnosFilterPipe } from './escuela/alumnos-filter.pipe';
 import { CalificacionesAlumComponent } from './escuela/calificaciones-alum/calificaciones-alum.component';
 import { AlumnoReactiveComponent } from './formularios/alumno-reactive/alumno-reactive.component';

@@ -13,20 +13,18 @@ import {MatRadioModule} from '@angular/material/radio';
 
 
 
-// import { OperasBasComponent } from '../operas-bas/operas-bas.component';
+import { OperasBasComponent } from '../operas-bas/operas-bas.component';
 
 
 
 // practicas angular
 @NgModule({
-  declarations: [],
+  declarations: [OperasBasComponent],
   imports: [
     CommonModule,
     MatInputModule,MatIconModule,MatButtonModule,MatRadioModule,MatFormFieldModule,
     FormsModule
   ],
-  exports:[
-    // OperasBasComponent
-  ]
+  exports:[OperasBasComponent]
 })
 export class OperasModule { }
